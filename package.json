@@ -1,0 +1,35 @@
+{
+  "name": "node-base",
+  "version": "1.0.0",
+  "description": "The description",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadirahq/node-base.git"
+  },
+  "license": "Kadira Inc.",
+  "options": {
+    "mocha": "--require scripts/mocha_runner server/**/__tests__/**/*.js"
+  },
+  "scripts": {
+    "dev": "./scripts/devrun.sh",
+    "prod": "./scripts/prodrun.sh",
+    "localprod": "./scripts/localprodrun.sh",
+    "lint": "./node_modules/.bin/eslint ./server",
+    "lintfix": "./node_modules/.bin/eslint ./server --fix",
+    "testonly": "./node_modules/.bin/mocha $npm_package_options_mocha",
+    "test": "npm run lint && npm run testonly"
+  },
+  "devDependencies": {
+    "nodemon": "1.7.x",
+    "mocha": "2.x.x",
+    "chai": "3.x.x",
+    "eslint": "1.7.x",
+    "babel-eslint": "4.x.x",
+    "eslint-plugin-babel": "2.x.x"
+  },
+  "dependencies": {
+    "babel": "5.x.x",
+    "babel-runtime": "5.x.x"
+  },
+  "private": true
+}
