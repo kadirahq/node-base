@@ -1,4 +1,2 @@
-require('babel/register')({
-  optional: ['runtime', 'es7.asyncFunctions']
-});
+require('babel-core/register');
 require('./server/index');
